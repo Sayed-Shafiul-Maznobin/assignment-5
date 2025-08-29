@@ -1,3 +1,5 @@
+
+
 //   count related
 let heart = 0;
 let coin = 100;
@@ -32,7 +34,6 @@ for (let single of Call) {
     for (let single of name) {
       name1 = single.innerText;
     }
-    // console.log(name1);
 
     let number =
       single.parentElement.parentElement.getElementsByClassName(
@@ -46,12 +47,12 @@ for (let single of Call) {
 
     const parent = document.getElementById("history");
     const child = document.createElement("div");
-    // const time1 = newdate().toLocalTimeString();
+    ///////////////////////////////////////////////////////////////
     child.innerHTML = `  
 
 
 
- <div class="flex justify-between items-center bg-gray-100  md:text-sm  my-1 rounded  "> 
+ <div class="flex justify-between items-center bg-gray-100    my-1 rounded  "> 
     <div>
           ${name1}
         <br>
@@ -59,7 +60,7 @@ for (let single of Call) {
     </div>
 
     <div>
-    333
+     ${ new Date().toLocaleTimeString()}
        
     </div>
 </div>
