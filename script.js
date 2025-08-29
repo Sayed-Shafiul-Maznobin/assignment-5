@@ -40,5 +40,36 @@ for (let single of Call) {
     }
     console.log(name1, number1);
     alert("Calling   " + name1 + "      " + number1);
+
+    const parent = document.getElementById("history");
+    const child = document.createElement("div");
+    // const time1 = newdate().toLocalTimeString();
+    child.innerHTML = `  
+
+
+
+ <div class="flex justify-between items-center bg-gray-100  md:text-sm  my-1 rounded  "> 
+    <div>
+          ${name1}
+        <br>
+       ${number1}    
+    </div>
+
+    <div>
+        ffffff   
+    </div>
+</div>
+
+ 
+`;
+    parent.appendChild(child);
+    console.log(name1);
+    console.log(number1);
   });
 }
+
+// clear button function
+
+document.getElementById("clearbtn").addEventListener("click", function () {
+  document.getElementById("history").innerHTML = "";
+});
