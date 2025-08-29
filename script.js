@@ -1,8 +1,11 @@
-// heart count related
+//   count related
 let heart = 0;
 let coin = 100;
+let copy1 = 0;
+
 document.getElementById("heartAmount").innerText = heart;
 document.getElementById("coinAmount").innerText = coin;
+document.getElementById("copyamount").innerText = copy1;
 let heartClick1 = document.querySelectorAll("#heartClick");
 for (let single of heartClick1) {
   single.addEventListener("click", function () {
@@ -56,7 +59,8 @@ for (let single of Call) {
     </div>
 
     <div>
-        ffffff   
+    333
+       
     </div>
 </div>
 
@@ -73,3 +77,20 @@ for (let single of Call) {
 document.getElementById("clearbtn").addEventListener("click", function () {
   document.getElementById("history").innerHTML = "";
 });
+
+// copy button function
+const copy = document.querySelectorAll("#copybtn");
+
+for (let single of copy) {
+  single.addEventListener("click", function () {
+    copy1 += 1;
+    document.getElementById("copyamount").innerText = copy1;
+
+    let copy2 =
+      single.parentElement.parentElement.querySelector("#copytext").innerText;
+    console.log(copy2);
+
+    alert("copied     " + copy2);
+    navigator.clipboard.writeText(copy2);
+  });
+}
